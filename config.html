@@ -1,0 +1,585 @@
+<html>
+<meta charset="UTF-8" />
+
+<style>
+@font-face{
+   font-family:DB-font; 
+   src: url(fonts/DBScreenSans-DigitalRegular.ttf)
+ }
+body{
+  font-family: 'DB-font';
+  font-size: 22px;
+}
+label{
+  font-family: 'DB-font';
+  font-size: 15px;
+}
+.collapsible {
+    background-color: #19a7a7;
+    color: #ffe5e5;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    text-align: left;
+    outline-style: double;
+    font-size: 15px;
+    font-family: 'DB-font';
+  }
+
+  .active,
+  .collapsible:hover {
+    background-color: #92efef;
+    color: #464545;
+    
+  }
+.btn-primary{
+			color: #ffffff;
+			background-color: #19a7a7;
+			border: 1px solid #19a7a7;
+			border-radius: 2px;
+			padding: 5px 15px;
+			cursor: pointer;
+      font-family: 'DB-font';
+}
+.btn-primary:hover {
+			color: #292929;
+			background-color: #92efef;
+		}
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f0f8f8;
+    font-family: 'DB-font';
+  }
+
+  input:not(.ibox) {
+    width: 100%;
+    outline: none;
+    border: 0;
+    line-height: 2em;
+    font-family: 'DB-font';
+  }
+
+  div.container {
+    display: flex;
+    font-family: 'DB-font';
+  }
+
+  div.child {
+    width: 30%;
+    font-family: 'DB-font';
+  }
+
+  div.childf {
+    margin-top: 25px;
+    margin-left: 15px;
+    font-family: 'DB-font';
+  }
+</style>
+ <script src="https://play.workadventu.re/iframe_api.js"></script>
+  <script src="https://unpkg.com/@workadventure/scripting-api-extra"></script>
+</head>
+
+<body style="background-color: rgb(255, 255, 255)">
+ 
+
+  <div>
+    <h1>Konfiguration</h1>
+  </div>
+  <button type="button" class="collapsible">Information</button>
+  <div class="content">
+    <br />
+    <label for="info">Text:</label>
+    <br />
+    <input type="text" id="info" name="info" />
+    <br /><br />
+    <label for="info_link">Link:</label>
+    <br />
+    <input type="text" id="info_link" name="info_link" />
+    <br /><br />
+    <div class="container">
+      <div class="child">
+        <label for="info_button">Button:</label><br />
+        <input type="text" id="info_button" name="info_button" />
+        <br /><br />
+      </div>
+
+      <div class="child childf">
+        <label>iFrame <input type="checkbox" class="ibox" id="info_frame" name="info_frame" /></label>
+      </div>
+    </div>
+    <button id="set_button" class="btn-primary" onclick="setValues()" style="float: right;">Speichern</button>
+    <br />
+    <br />
+  </div>
+
+
+  <button type="button" class="collapsible">Schalter 1</button>
+  <div class="content">
+    <br />
+    <label for="schalter1">Text:</label><br />
+    <input type="text" id="schalter1" name="schalter1" /><br /><br />
+
+    <label for="schalter1_1_link">Link 1:</label><br />
+    <input type="text" id="schalter1_1_link" name="schalter1_1_link" /><br /><br />
+
+    <div class="container">
+
+      <div class="child">
+        <label for="schalter1_1_button">Button 1:</label><br />
+        <input type="text" id="schalter1_1_button" name="schalter1_1_button" /><br /><br />
+
+      </div>
+
+      <div class="child childf">
+        <label>iFrame <input type="checkbox" id="schalter1_1_frame" class="ibox" name="schalter1_1_frame" /></label>
+
+      </div>
+    </div>
+    <label for="schalter1_2_link">Link 2:</label><br />
+    <input type="text" id="schalter1_2_link" name="schalter1_2_link" /><br /><br />
+
+    <div class="container">
+      <div class="child">
+        <label for="schalter1_2_button">Button 2:</label>
+        <input type="text" id="schalter1_2_button" name="schalter1_2_button" /><br /><br />
+
+      </div>
+
+      <div class="child childf">
+        <label>iFrame <input type="checkbox" id="schalter1_2_frame" class="ibox" name="schalter1_2_frame" /></label>
+
+      </div>
+
+    </div>
+    <label for="schalter1_3_link">Link 3:</label><br />
+    <input type="text" id="schalter1_3_link" name="schalter1_3_link" /><br /><br />
+
+
+    <div class="container">
+      <div class="child">
+        <label for="schalter1_3_button">Button 3:</label>
+        <input type="text" id="schalter1_3_button" name="schalter1_3_button" /><br /><br />
+      </div>
+
+      <div class="child childf">
+        <label>iFrame <input type="checkbox" id="schalter1_3_frame" class="ibox" name="schalter1_3_frame" /></label>
+
+      </div>
+
+    </div>
+    <button id="set_button" class="btn-primary" onclick="setValues()" style="float: right;">Speichern</button>
+    <br />
+    <br />
+
+  </div>
+  <button type="button" class="collapsible">Schalter 2:</button>
+  <div class="content">
+    <br />
+    <label for="schalter2">Text:</label><br />
+    <input type="text" id="schalter2" name="schalter2" /><br /><br />
+    <label for="schalter2_1_link">Link 1:</label><br />
+    <input type="text" id="schalter2_1_link" name="schalter2_1_link" /><br /><br />
+
+
+    <div class="container">
+      <div class="child">
+        <label for="schalter2_1_button">Button 1:</label><br />
+        <input type="text" id="schalter2_1_button" name="schalter2_1_button" /><br /><br />
+      </div>
+
+      <div class="child childf">
+        <label>iFrame <input type="checkbox" id="schalter2_1_frame" class="ibox" name="schalter2_1_frame" /></label>
+
+      </div>
+    </div>
+
+    <label for="schalter2_2_link">Link 2:</label><br />
+    <input type="text" id="schalter2_2_link" name="schalter2_2_link" /><br /><br />
+    <div class="container">
+      <div class="child">
+
+        <label for="schalter2_2_button">Button 2:</label><br />
+        <input type="text" id="schalter2_2_button" name="schalter2_2_button" /><br /><br />
+
+      </div>
+
+      <div class="child childf">
+        <label>iFrame <input type="checkbox" id="schalter2_2_frame" class="ibox" name="schalter2_2_frame" /></label>
+
+      </div>
+
+    </div>
+
+
+    <label for="schalter2_3_link">Link 3:</label><br />
+    <input type="text" id="schalter2_3_link" name="schalter2_3_link" /><br /><br />
+    <div class="container">
+      <div class="child">
+
+        <label for="schalter2_3_button">Button 3:</label><br />
+        <input type="text" id="schalter2_3_button" name="schalter2_3_button" /><br /><br />
+      </div>
+
+      <div class="child childf">
+        <label>iFrame <input type="checkbox" id="schalter2_3_frame" class="ibox" name="schalter2_3_frame" /></label>
+
+      </div>
+    </div>
+    <button id="set_button" class="btn-primary" onclick="setValues()" style="float: right;">Speichern</button>
+    <br />
+    <br />
+  </div>
+
+
+
+
+
+  <button type="button" class="collapsible">Schalter 3:</button>
+  <div class="content">
+    <br />
+    <label for="schalter3">Text:</label><br />
+    <input type="text" id="schalter3" name="schalter3" /><br /><br />
+
+
+    <label for="schalter3_1_link">Link 1:</label><br />
+    <input type="text" id="schalter3_1_link" name="schalter3_1_link" /><br /><br />
+
+    <div class="container">
+      <div class="child">
+        <label for="schalter3_1_button">Button 1:</label><br />
+        <input type="text" id="schalter3_1_button" name="schalter3_1_button" /><br /><br />
+      </div>
+
+      <div class="child childf">
+        <label>iFrame <input type="checkbox" id="schalter3_1_frame" class="ibox" name="schalter3_1_frame" /></label>
+      </div>
+    </div>
+
+    <label for="schalter3_2_link">Link 2:</label><br />
+    <input type="text" id="schalter3_2_link" name="schalter3_2_link" /><br /><br />
+    <div class="container">
+      <div class="child">
+        <label for="schalter3_2_button">Button 2:</label><br />
+        <input type="text" id="schalter3_2_button" name="schalter3_2_button" /><br /><br />
+      </div>
+
+      <div class="child childf">
+        <label>iFrame <input type="checkbox" id="schalter3_2_frame" class="ibox" name="schalter3_2_frame" /></label>
+      </div>
+
+    </div>
+
+    <label for="schalter3_3_link">Link 3:</label><br />
+    <input type="text" id="schalter3_3_link" name="schalter3_3_link" /><br /><br />
+
+
+    <div class="container">
+      <div class="child">
+        <label for="schalter3_3_button">Button 3:</label><br />
+        <input type="text" id="schalter3_3_button" name="schalter3_3_button" /><br /><br />
+      </div>
+
+      <div class="child childf">
+        <label>iFrame <input type="checkbox" id="schalter3_3_frame" class="ibox" name="schalter3_3_frame" /></label>
+      </div>
+
+    </div>
+
+    <button id="set_button" class="btn-primary" onclick="setValues()" style="float: right;">Speichern</button>
+    <br />
+    <br />
+  </div>
+
+
+
+
+  <button type="button" class="collapsible">Säule</button>
+  <div class="content">
+    <br />
+    <label for="saule">Text:</label><br />
+    <input type="text" id="saule" name="saule" /><br /><br />
+    <label for="saule_link">Link:</label><br />
+    <input type="text" id="saule_link" name="saule_link" /><br /><br />
+
+    <div class="container">
+      <div class="child">
+        <label for="saule_button">Button:</label><br />
+        <input type="text" id="saule_button" name="saule_button" /><br /><br />
+      </div>
+
+      <div class="child childf">
+        <label>iFrame <input type="checkbox" id="saule_frame" class="ibox" name="saule_frame" /></label>
+      </div>
+
+
+    </div>
+
+  </div>
+  </div>
+  <br />
+  <br />
+  <button id="set_button" class="btn-primary" onclick="setValues()" style="float: right;">Speichern</button>
+</body>
+
+<script>
+
+  console.log("CONFIG SCRIPT: ");
+
+  document.getElementById("info").value = WA.state.info_popupText;
+  document.getElementById("info_link").value = WA.state.program_info;
+  document.getElementById("info_button").value = WA.state.button_info;
+  document.getElementById("info_frame").checked = WA.state.info_iframe;
+
+  document.getElementById("saule").value = WA.state.popUp_saeule;
+  document.getElementById("saule_link").value = WA.state.program_saeule;
+  document.getElementById("saule_button").value = WA.state.button_saeule;
+  document.getElementById("saule_frame").checked = WA.state.saeule_iframe;
+
+  document.getElementById("schalter1").value = WA.state.schalter1_popupText;
+  document.getElementById("schalter1_3_button").value =
+    WA.state.button_schalter1_3;
+  document.getElementById("schalter1_3_link").value =
+    WA.state.program_schalter1_3;
+  document.getElementById("schalter1_3_frame").checked =
+    WA.state.schalter1_3_iframe;
+
+  document.getElementById("schalter1_2_button").value =
+    WA.state.button_schalter1_2;
+  document.getElementById("schalter1_2_link").value =
+    WA.state.program_schalter1_2;
+  document.getElementById("schalter1_2_frame").checked =
+    WA.state.schalter1_2_iframe;
+
+  document.getElementById("schalter1_1_button").value =
+    WA.state.button_schalter1_1;
+  document.getElementById("schalter1_1_link").value =
+    WA.state.program_schalter1_1;
+  document.getElementById("schalter1_1_frame").checked =
+    WA.state.schalter1_1_iframe;
+
+  document.getElementById("schalter2").value = WA.state.schalter2_popupText;
+  document.getElementById("schalter2_3_button").value =
+    WA.state.button_schalter2_3;
+  document.getElementById("schalter2_3_link").value =
+    WA.state.program_schalter2_3;
+  document.getElementById("schalter2_3_frame").checked =
+    WA.state.schalter2_3_iframe;
+
+  document.getElementById("schalter2_2_button").value =
+    WA.state.button_schalter2_2;
+  document.getElementById("schalter2_2_link").value =
+    WA.state.program_schalter2_2;
+  document.getElementById("schalter2_2_frame").checked =
+    WA.state.schalter2_2_iframe;
+
+  document.getElementById("schalter2_1_button").value =
+    WA.state.button_schalter2_1;
+  document.getElementById("schalter2_1_link").value =
+    WA.state.program_schalter2_1;
+  document.getElementById("schalter2_1_frame").checked =
+    WA.state.schalter2_1_iframe;
+
+  document.getElementById("schalter3").value = WA.state.schalter3_popupText;
+  document.getElementById("schalter3_3_button").value =
+    WA.state.button_schalter3_3;
+  document.getElementById("schalter3_3_link").value =
+    WA.state.program_schalter3_3;
+  document.getElementById("schalter3_3_frame").checked =
+    WA.state.schalter3_3_iframe;
+
+  document.getElementById("schalter3_2_button").value =
+    WA.state.button_schalter3_2;
+  document.getElementById("schalter3_2_link").value =
+    WA.state.program_schalter3_2;
+  document.getElementById("schalter3_2_frame").checked =
+    WA.state.schalter3_2_iframe;
+
+  document.getElementById("schalter3_1_button").value =
+    WA.state.button_schalter3_1;
+  document.getElementById("schalter3_1_link").value =
+    WA.state.program_schalter3_1;
+  document.getElementById("schalter3_1_frame").checked =
+    WA.state.schalter3_1_iframe;
+
+  function setValues() {
+    WA.state.saveVariable(
+      "info_popupText",
+      document.getElementById("info").value
+    );
+    WA.state.saveVariable(
+      "program_info",
+      document.getElementById("info_link").value
+    );
+    WA.state.saveVariable(
+      "button_info",
+      document.getElementById("info_button").value
+    );
+    WA.state.saveVariable(
+      "info_iframe",
+      document.getElementById("info_frame").checked
+    );
+
+    WA.state.saveVariable(
+      "popUp_saeule",
+      document.getElementById("saule").value
+    );
+    WA.state.saveVariable(
+      "program_saeule",
+      document.getElementById("saule_link").value
+    );
+    WA.state.saveVariable(
+      "button_saeule",
+      document.getElementById("saule_button").value
+    );
+    WA.state.saveVariable(
+      "saeule_iframe",
+      document.getElementById("saule_frame").checked
+    );
+
+    WA.state.saveVariable(
+      "schalter1_popupText",
+      document.getElementById("schalter1").value
+    );
+
+    WA.state.saveVariable(
+      "schalter2_popupText",
+      document.getElementById("schalter2").value
+    );
+
+    WA.state.saveVariable(
+      "schalter3_popupText",
+      document.getElementById("schalter3").value
+    );
+    WA.state.saveVariable(
+      "button_schalter3_3",
+      document.getElementById("schalter3_3_button").value
+    );
+    WA.state.saveVariable(
+      "program_schalter3_3",
+      document.getElementById("schalter3_3_link").value
+    );
+    WA.state.saveVariable(
+      "schalter3_3_iframe",
+      document.getElementById("schalter3_3_frame").checked
+    );
+    WA.state.saveVariable(
+      "button_schalter3_2",
+      document.getElementById("schalter3_2_button").value
+    );
+    WA.state.saveVariable(
+      "program_schalter3_2",
+      document.getElementById("schalter3_2_link").value
+    );
+    WA.state.saveVariable(
+      "schalter3_2_iframe",
+      document.getElementById("schalter3_2_frame").checked
+    );
+    WA.state.saveVariable(
+      "button_schalter3_1",
+      document.getElementById("schalter3_1_button").value
+    );
+    WA.state.saveVariable(
+      "program_schalter3_1",
+      document.getElementById("schalter3_1_link").value
+    );
+    WA.state.saveVariable(
+      "schalter3_1_iframe",
+      document.getElementById("schalter3_1_frame").checked
+    );
+    WA.state.saveVariable(
+      "button_schalter2_3",
+      document.getElementById("schalter2_3_button").value
+    );
+    WA.state.saveVariable(
+      "program_schalter2_3",
+      document.getElementById("schalter2_3_link").value
+    );
+    WA.state.saveVariable(
+      "schalter2_3_iframe",
+      document.getElementById("schalter2_3_frame").checked
+    );
+    WA.state.saveVariable(
+      "button_schalter2_2",
+      document.getElementById("schalter2_2_button").value
+    );
+    WA.state.saveVariable(
+      "program_schalter2_2",
+      document.getElementById("schalter2_2_link").value
+    );
+    WA.state.saveVariable(
+      "schalter2_2_iframe",
+      document.getElementById("schalter2_2_frame").checked
+    );
+    WA.state.saveVariable(
+      "button_schalter2_1",
+      document.getElementById("schalter2_1_button").value
+    );
+    WA.state.saveVariable(
+      "program_schalter2_1",
+      document.getElementById("schalter2_1_link").value
+    );
+    WA.state.saveVariable(
+      "schalter2_1_iframe",
+      document.getElementById("schalter2_1_frame").checked
+    );
+    WA.state.saveVariable(
+      "button_schalter1_3",
+      document.getElementById("schalter1_3_button").value
+    );
+    WA.state.saveVariable(
+      "program_schalter1_3",
+      document.getElementById("schalter1_3_link").value
+    );
+    WA.state.saveVariable(
+      "schalter1_3_iframe",
+      document.getElementById("schalter1_3_frame").checked
+    );
+    WA.state.saveVariable(
+      "button_schalter1_2",
+      document.getElementById("schalter1_2_button").value
+    );
+    WA.state.saveVariable(
+      "program_schalter1_2",
+      document.getElementById("schalter1_2_link").value
+    );
+    WA.state.saveVariable(
+      "schalter1_2_iframe",
+      document.getElementById("schalter1_2_frame").checked
+    );
+    WA.state.saveVariable(
+      "button_schalter1_1",
+      document.getElementById("schalter1_1_button").value
+    );
+    WA.state.saveVariable(
+      "program_schalter1_1",
+      document.getElementById("schalter1_1_link").value
+    );
+    WA.state.saveVariable(
+      "schalter1_1_iframe",
+      document.getElementById("schalter1_1_frame").checked
+    );
+  }
+
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+
+  console.log("CONFIG SCRIPT ENDE");
+</script>
+
+</html>
