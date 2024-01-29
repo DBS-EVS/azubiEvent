@@ -106,7 +106,7 @@ WA.room.onEnter("feedbackZone3").subscribe(() => {
   );
 });
 
-WA.room.onEnter("feedbackZone")4.subscribe(() => {
+WA.room.onEnter("feedbackZone4").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback4",
     "Welches Spiel gibt es?/nSchach/nBowling/nBilliard/nBadminton/nNotiert euch eure Antwort!"
