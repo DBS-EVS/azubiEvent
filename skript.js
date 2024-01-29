@@ -222,7 +222,7 @@ WA.room.onLeaveLayer("portal_program").subscribe(() => {
   }
 });
 
-WA.room.area.onEnterLayer("designer_zone").subscribe(() => {
+WA.room.onEnterLayer("designer_zone").subscribe(() => {
   currentPopup = WA.ui.openPopup("designer_PopUp", "Architekten und Designer gesucht!\nDu hast Ideen für die Gestaltung der Umgebung oder möchtest dich im Designteam kreativ einbringen?", [
     {
       label: "Mail",
@@ -246,7 +246,7 @@ WA.room.area.onEnterLayer("designer_zone").subscribe(() => {
   );
 });
 
-WA.room.area.onLeave("designer_zone").subscribe(() => {
+WA.room.onLeave("designer_zone").subscribe(() => {
   closePopUp();
 });
 
