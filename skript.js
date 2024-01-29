@@ -246,7 +246,7 @@ WA.room.onEnterLayer("designer_zone").subscribe(() => {
   );
 });
 
-WA.room.onLeave("designer_zone").subscribe(() => {
+WA.room.onLeaveLayer("designer_zone").subscribe(() => {
   closePopUp();
 });
 
