@@ -50,6 +50,21 @@ WA.room.onLeaveLayer("needHelpZone").subscribe(()  => {
   }
 });
 
+WA.room.onEnterLayer("spielregelnZone").subscribe(() => {
+  currentPopup = WA.ui.openPopup(
+    "popUpSpielregeln",
+    "Spielregeln:/n1. Das Team, das am schnellsten die 5 Fragen richtig beantwortet hat, gewinnt./n2. Finde zwei weitere Mitspieler. Zu dritt seid ihr ein Team./n3. Wenn eure Wokas nah beieinander sind, öffnet sich ein Kreisgespräch. Schließt euren Kreis ab. Aktiviert die „Folgen“-Funktion, so dass ihr zusammengehen könnt./n4. Überlegt euch einen Teamnamen./n 4.Geht zum Start. Gebt dort euren Teamnamen und eure Namen ein. Mit dem Absenden euer Startkarte beginnt eure Zeit zu laufen./n 6.An den Fragesäulen 1-5 findet ihr die Fragen. Löst die Fragen und notiert euch eure Antworten./n 7. Habt ihr alle 5 Fragen gelöst, geht zum Ziel. Tragt eure Antworten ein. Mit dem Absenden eurer Antworten wird eure Zeit gestoppt./n/nViel Erfolg!""
+    
+    [
+      {
+        label: "Schließen",
+        className: "secondary",
+        callback: () => closePopUp(),
+      }
+    ]
+  );
+});
+
 WA.room.onEnterLayer("feedbackZone").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "feedbackPopup",
