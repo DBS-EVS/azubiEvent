@@ -50,7 +50,7 @@ WA.room.onLeaveLayer("needHelpZone").subscribe(()  => {
   }
 });
 
-WA.room.onEnter("spielregelnZone").subscribe(() => {
+WA.room.onEnterLayer("spielregelnZone").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpSpielregeln",
     "Spielregeln:/n1. Das Team, das am schnellsten die 5 Fragen richtig beantwortet hat, gewinnt./n2. Finde zwei weitere Mitspieler. Zu dritt seid ihr ein Team./n3. Wenn eure Wokas nah beieinander sind, öffnet sich ein Kreisgespräch. Schließt euren Kreis ab. Aktiviert die „Folgen“-Funktion, so dass ihr zusammengehen könnt./n4. Überlegt euch einen Teamnamen./n 4.Geht zum Start. Gebt dort euren Teamnamen und eure Namen ein. Mit dem Absenden euer Startkarte beginnt eure Zeit zu laufen./n 6.An den Fragesäulen 1-5 findet ihr die Fragen. Löst die Fragen und notiert euch eure Antworten./n 7. Habt ihr alle 5 Fragen gelöst, geht zum Ziel. Tragt eure Antworten ein. Mit dem Absenden eurer Antworten wird eure Zeit gestoppt./n/nViel Erfolg!"
@@ -64,7 +64,7 @@ WA.room.onEnter("spielregelnZone").subscribe(() => {
   );
 });
 
-WA.room.onEnter("feedbackZone1").subscribe(() => {
+WA.room.onEnterLayer("feedbackZone1").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback1",
     "Wie viele Feuerlöscher gibt es in der gesamten Umgebung?/n1/n2/n3/n4/n5/nNotiert euch eure Antwort!"
@@ -78,7 +78,7 @@ WA.room.onEnter("feedbackZone1").subscribe(() => {
   );
 });
 
-WA.room.onEnter("feedbackZone2").subscribe(() => {
+WA.room.onEnterLayer("feedbackZone2").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback2",
     "Welche Getränke kann man am Getränkeautomaten auswählen?/nSpezi/nCappuccino/nOrangensaft/nVirgin Mojito/nMate/nNotiert euch eure Antwort!"
@@ -92,7 +92,7 @@ WA.room.onEnter("feedbackZone2").subscribe(() => {
   );
 });
 
-WA.room.onEnter("feedbackZone3").subscribe(() => {
+WA.room.onEnterLayer("feedbackZone3").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback3",
     "Was kann man im Garten nicht?/nFeuer knistern hören/nsich hinterm baum Verstecken/nVogelgezwitscher hören/nim Zelt kuschel/nKlavier spielen/nNotiert euch eure Antwort!"
@@ -106,7 +106,7 @@ WA.room.onEnter("feedbackZone3").subscribe(() => {
   );
 });
 
-WA.room.onEnter("feedbackZone4").subscribe(() => {
+WA.room.onEnterLayer("feedbackZone4").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback4",
     "Welches Spiel gibt es?/nSchach/nBowling/nBilliard/nBadminton/nNotiert euch eure Antwort!"
@@ -120,7 +120,7 @@ WA.room.onEnter("feedbackZone4").subscribe(() => {
   );
 });
 
-WA.room.onEnter("feedbackZone5").subscribe(() => {
+WA.room.onEnterLayer("feedbackZone5").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback5",
     "Wer hat den Co-Workingspace designed?/nJules und Niklas/nNancy und Kai/nErni und Bert/nSven und Lars/nNotiert euch eure Antwort!"
@@ -222,7 +222,7 @@ WA.room.onLeaveLayer("portal_program").subscribe(() => {
   }
 });
 
-WA.room.area.onEnter("designer_zone").subscribe(() => {
+WA.room.area.onEnterLayer("designer_zone").subscribe(() => {
   currentPopup = WA.ui.openPopup("designer_PopUp", "Architekten und Designer gesucht!\nDu hast Ideen für die Gestaltung der Umgebung oder möchtest dich im Designteam kreativ einbringen?", [
     {
       label: "Mail",
