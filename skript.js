@@ -104,6 +104,23 @@ WA.room.area.onEnter("feedbackZone3").subscribe(() => {
   );
 });
 
+WA.room.onEnterLayer("feedback_zone3").subscribe(() => {
+  currentPopup = WA.ui.openPopup(
+    "popUpFeedback3",
+    "Was kann man im Garten nicht?\nFeuer knistern hören\nsich hinterm baum Verstecken\nVogelgezwitscher hören\nim Zelt kuschel\nKlavier spielen\nNotiert euch eure Antwort!",
+    [
+      {
+        label: "Schließen",
+        className: "secondary",
+        callback: () => closePopUp(),
+      }
+    ]
+  );
+});
+
+
+
+
 WA.room.area.onEnter("feedbackZone4").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback4",
