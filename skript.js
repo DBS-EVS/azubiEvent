@@ -65,9 +65,7 @@ WA.room.area.onEnter("spielregelnZone").subscribe(() => {
 });
 
 WA.room.area.onEnter("feedbackZone1").subscribe(() => {
-  currentPopup = WA.ui.openPopup(
-    "popUpFeedback1",
-    "Wie viele Feuerlöscher gibt es in der gesamten Umgebung?\n1\n2\n3\n4\n5\nNotiert euch eure Antwort!"
+  currentPopup = WA.ui.openPopup("popUpFeedback1","Wie viele Feuerlöscher gibt es in der gesamten Umgebung?\n1\n2\n3\n4\n5\nNotiert euch eure Antwort!"
     [
       {
         label: "Schließen",
