@@ -53,7 +53,7 @@ WA.room.onLeaveLayer("needHelpZone").subscribe(()  => {
 WA.room.area.onEnter("spielregelnZone").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpSpielregeln",
-    "Spielregeln:\n1. Das Team, das am schnellsten die 5 Fragen richtig beantwortet hat, gewinnt.\n2. Finde zwei weitere Mitspieler. Zu dritt seid ihr ein Team.\n3. Wenn eure Wokas nah beieinander sind, öffnet sich ein Kreisgespräch. Schließt euren Kreis ab. Aktiviert die „Folgen“-Funktion, so dass ihr zusammengehen könnt.\n4. Überlegt euch einen Teamnamen.\n 4.Geht zum Start. Gebt dort euren Teamnamen und eure Namen ein. Mit dem Absenden euer Startkarte beginnt eure Zeit zu laufen.\n 6.An den Fragesäulen 1-5 findet ihr die Fragen. Löst die Fragen und notiert euch eure Antworten.\n 7. Habt ihr alle 5 Fragen gelöst, geht zum Ziel. Tragt eure Antworten ein. Mit dem Absenden eurer Antworten wird eure Zeit gestoppt.\n\nViel Erfolg!",
+    "Spielregeln:\n1. Das Team, das am schnellsten die 5 Fragen richtig beantwortet hat, gewinnt.\n2. Finde zwei weitere Mitspieler. Zu dritt seid ihr ein Team.\n3. Wenn eure Wokas nah beieinander sind, öffnet sich ein Kreisgespräch. Schließt euren Kreis ab. Aktiviert die „Folgen“-Funktion, so dass ihr zusammengehen könnt.\n4. Überlegt euch einen Teamnamen.\n 5.Geht zum Start. Gebt dort euren Teamnamen und eure Namen ein. Mit dem Absenden euer Startkarte beginnt eure Zeit zu laufen.\n 6.An den Fragesäulen 1-5 findet ihr die Fragen. Löst die Fragen und notiert euch eure Antworten.\n 7. Habt ihr alle 5 Fragen gelöst, geht zum Ziel. Tragt eure Antworten ein. Mit dem Absenden eurer Antworten wird eure Zeit gestoppt.\n\nViel Erfolg!",
     [
       {
         label: "Schließen",
@@ -105,7 +105,7 @@ WA.room.area.onLeave("feedbackZone2").subscribe(() => {
 WA.room.area.onEnter("feedbackZone3").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback3",
-    "Was kann man im Garten nicht?\n\nFeuer knistern hören\nsich hinterm baum Verstecken\nVogelgezwitscher hören\nim Zelt kuschel\nKlavier spielen\n\nNotiert euch eure Antwort!",
+    "Was kann man im Garten nicht?\n\nFeuer knistern hören\nsich hinterm Baum verstecken\nVogelgezwitscher hören\nim Zelt kuscheln\nKlavier spielen\n\nNotiert euch eure Antwort!",
     [
       {
         label: "Schließen",
@@ -124,7 +124,7 @@ WA.room.area.onLeave("feedbackZone3").subscribe(() => {
 WA.room.area.onEnter("feedbackZone4").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback4",
-    "Welches Spiel gibt es?\n\nSchach\nBowling\nBilliard\nBadminton\n\nNotiert euch eure Antwort!",
+    "Welches Spiel gibt es im Raumschiff?\n\nSchach\nBowling\nBilliard\nBadminton\n\nNotiert euch eure Antwort!",
     [
       {
         label: "Schließen",
@@ -153,6 +153,40 @@ WA.room.area.onEnter("feedbackZone5").subscribe(() => {
   );
 });
 WA.room.area.onLeave("feedbackZone5").subscribe(() => {
+  closePopUp();
+})
+
+WA.room.area.onEnter("agendaZone3").subscribe(() => {
+  currentPopup = WA.ui.openPopup(
+    "infoPopUp3",
+    "Agenda:\n\n9:30-10:00 Vernetzungsspiel im Saal\n10:00 Impulsvortrag KI auf der Hauptbühne\nAb 11:00 Besuche die Sitzecke für verschiedene Gesprächsangebote, schnapp dir ein Team und nehm an unserer Rally teil oder besuche die Führung des Co-Working Bereiches! \n Darüber hinaus kannst du dich natürlich die ganze Zeit mit anderen Nachwuchskräften austauschen und vernetzen!\n Du hast ein technisches Problem? Lauf an unserem Helpdesk vorbei!\n Viel Spaß beim Vernetzen!",
+    [
+      {
+        label: "Schließen",
+        className: "secondary",
+        callback: () => closePopUp(),
+      }
+    ]
+  );
+});
+WA.room.area.onLeave("agendaZone3").subscribe(() => {
+  closePopUp();
+})
+
+WA.room.area.onEnter("agendaZone2").subscribe(() => {
+  currentPopup = WA.ui.openPopup(
+    "infoPopUp3",
+    "Agenda:\n\n9:30-10:00 Vernetzungsspiel im Saal\n10:00 Impulsvortrag KI auf der Hauptbühne\nAb 11:00 Besuche die Sitzecke für verschiedene Gesprächsangebote, schnapp dir ein Team und nehm an unserer Rally teil oder besuche die Führung des Co-Working Bereiches! \n Darüber hinaus kannst du dich natürlich die ganze Zeit mit anderen Nachwuchskräften austauschen und vernetzen!\n Du hast ein technisches Problem? Lauf an unserem Helpdesk vorbei!\n Viel Spaß beim Vernetzen!",
+    [
+      {
+        label: "Schließen",
+        className: "secondary",
+        callback: () => closePopUp(),
+      }
+    ]
+  );
+});
+WA.room.area.onLeave("agendaZone2").subscribe(() => {
   closePopUp();
 })
 
@@ -344,7 +378,7 @@ WA.onInit()
       });
     }
 
-      currentPopup = WA.ui.openPopup("popUpStart","Willkommen beim Tag der Vernetzung - nutze die Chance und lerne die anderen Teilnehmenden kennen!\n\nAgenda:\n9:45-10:00 Vernetzungsspiel im Saal\n10:00 Impulsvortrag KI auf der Hauptbühne\nAb 10:30 Besuche die Sitzecke für verschiedene Gesprächsangebote, schnapp dir ein Team und nehm an unserer Rally teil oder besuche die Führung des Co-Working Bereiches! \n Darüber hinaus kannst du dich natürlich die ganze Zeit mit anderen Nachwuchskräften austauschen und vernetzen!\nDu hast ein technisches Problem? Lauf an unserem Helpdesk vorbei!\n Viel Spaß beim Vernetzen!",[
+      currentPopup = WA.ui.openPopup("popUpStart","Willkommen beim Tag der Vernetzung - nutze die Chance und lerne die anderen Teilnehmenden kennen!\n\nAgenda:\n\n9:30-10:00 Vernetzungsspiel im Saal\n10:00 Impulsvortrag KI auf der Hauptbühne\nAb 11:00 Besuche die Sitzecke für verschiedene Gesprächsangebote, schnapp dir ein Team und nehm an unserer Rally teil oder besuche die Führung des Co-Working Bereiches! \n Darüber hinaus kannst du dich natürlich die ganze Zeit mit anderen Nachwuchskräften austauschen und vernetzen!\nDu hast ein technisches Problem? Lauf an unserem Helpdesk vorbei!\n Viel Spaß beim Vernetzen!",[
         {
             label: "Schließen",
             callback: (popup) => {
