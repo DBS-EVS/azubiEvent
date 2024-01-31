@@ -64,8 +64,12 @@ WA.room.area.onEnter("spielregelnZone").subscribe(() => {
   );
 });
 
+WA.room.area.onLeave("spielregelnZone").subscribe(() => {
+  closePopUp();
+})
+
 WA.room.area.onEnter("feedbackZone1").subscribe(() => {
-  currentPopup = WA.ui.openPopup("popUpFeedback1","Wie viele Feuerlöscher gibt es in der gesamten Umgebung?\n1\n2\n3\n4\n5\nNotiert euch eure Antwort!",
+  currentPopup = WA.ui.openPopup("popUpFeedback1","Wie viele Feuerlöscher gibt es in der gesamten Umgebung?\n\n1\n2\n3\n4\n5\n\nNotiert euch eure Antwort!",
     [
       {
         label: "Schließen",
@@ -75,11 +79,15 @@ WA.room.area.onEnter("feedbackZone1").subscribe(() => {
     ]
   );
 });
+
+WA.room.area.onLeave("feedbackZone1").subscribe(() => {
+  closePopUp();
+})
 
 WA.room.area.onEnter("feedbackZone2").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback2",
-    "Welche Getränke kann man am Getränkeautomaten auswählen?\nSpezi\nCappuccino\nOrangensaft\nVirgin Mojito\nMate\nNotiert euch eure Antwort!",
+    "Welche Getränke kann man am Getränkeautomaten auswählen?\n\nSpezi\nCappuccino\nOrangensaft\nVirgin Mojito\nMate\n\nNotiert euch eure Antwort!",
     [
       {
         label: "Schließen",
@@ -90,10 +98,14 @@ WA.room.area.onEnter("feedbackZone2").subscribe(() => {
   );
 });
 
+WA.room.area.onLeave("feedbackZone2").subscribe(() => {
+  closePopUp();
+})
+
 WA.room.area.onEnter("feedbackZone3").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback3",
-    "Was kann man im Garten nicht?\nFeuer knistern hören\nsich hinterm baum Verstecken\nVogelgezwitscher hören\nim Zelt kuschel\nKlavier spielen\nNotiert euch eure Antwort!",
+    "Was kann man im Garten nicht?\n\nFeuer knistern hören\nsich hinterm baum Verstecken\nVogelgezwitscher hören\nim Zelt kuschel\nKlavier spielen\n\nNotiert euch eure Antwort!",
     [
       {
         label: "Schließen",
@@ -103,12 +115,16 @@ WA.room.area.onEnter("feedbackZone3").subscribe(() => {
     ]
   );
 });
+
+WA.room.area.onLeave("feedbackZone3").subscribe(() => {
+  closePopUp();
+})
 
 
 WA.room.area.onEnter("feedbackZone4").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback4",
-    "Welches Spiel gibt es?\nSchach\nBowling\nBilliard\nBadminton\nNotiert euch eure Antwort!",
+    "Welches Spiel gibt es?\n\nSchach\nBowling\nBilliard\nBadminton\n\nNotiert euch eure Antwort!",
     [
       {
         label: "Schließen",
@@ -119,10 +135,14 @@ WA.room.area.onEnter("feedbackZone4").subscribe(() => {
   );
 });
 
+WA.room.area.onLeave("feedbackZone4").subscribe(() => {
+  closePopUp();
+})
+
 WA.room.area.onEnter("feedbackZone5").subscribe(() => {
   currentPopup = WA.ui.openPopup(
     "popUpFeedback5",
-    "Wer hat den Co-Workingspace designed?\nJules und Niklas\nNancy und Kai\nErni und Bert\nSven und Lars\nNotiert euch eure Antwort!",
+    "Wer hat den Co-Workingspace designed?\n\nJules und Niklas\nNancy und Kai\nErni und Bert\nSven und Lars\n\nNotiert euch eure Antwort!",
     [
       {
         label: "Schließen",
@@ -132,6 +152,10 @@ WA.room.area.onEnter("feedbackZone5").subscribe(() => {
     ]
   );
 });
+WA.room.area.onLeave("feedbackZone5").subscribe(() => {
+  closePopUp();
+})
+
 
 WA.room.onEnterLayer("feedbackZone").subscribe(() => {
   currentPopup = WA.ui.openPopup(
