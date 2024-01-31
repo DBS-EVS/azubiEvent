@@ -175,7 +175,7 @@ WA.room.area.onLeave("agendaZone3").subscribe(() => {
 
 WA.room.area.onEnter("agendaZone2").subscribe(() => {
   currentPopup = WA.ui.openPopup(
-    "infoPopUp3",
+    "infoPopUp2",
     "Agenda:\n\n9:30-10:00 Vernetzungsspiel im Saal\n10:00 Impulsvortrag KI auf der Hauptbühne\nAb 11:00 Besuche die Sitzecke für verschiedene Gesprächsangebote, schnapp dir ein Team und nehm an unserer Rally teil oder besuche die Führung des Co-Working Bereiches! \n Darüber hinaus kannst du dich natürlich die ganze Zeit mit anderen Nachwuchskräften austauschen und vernetzen!\n Du hast ein technisches Problem? Lauf an unserem Helpdesk vorbei!\n Viel Spaß beim Vernetzen!",
     [
       {
@@ -221,28 +221,21 @@ WA.room.onLeaveLayer("feedbackZone").subscribe(() => {
 });
 
 WA.room.onEnterLayer("infoSaule_zone").subscribe(() => {
-  currentPopup = WA.ui.openPopup("infoPopUp", WA.state.infoPopUp, [
-    {
-      label: "alle Neuigkeiten",
-      className: "primary",
-      callback: (popup) => {
-        if (WA.state.info_iframe) {
-          WA.nav.openCoWebSite(WA.state.infoURL);
-        } else {
-          WA.nav.openTab(WA.state.infoURL);
-        }
-        closePopUp();
-      },
-    },
-  ]);
+  currentPopup = WA.ui.openPopup(
+    "infoPopUp2",
+    "Agenda:\n\n9:30-10:00 Vernetzungsspiel im Saal\n10:00 Impulsvortrag KI auf der Hauptbühne\nAb 11:00 Besuche die Sitzecke für verschiedene Gesprächsangebote, schnapp dir ein Team und nehm an unserer Rally teil oder besuche die Führung des Co-Working Bereiches! \n Darüber hinaus kannst du dich natürlich die ganze Zeit mit anderen Nachwuchskräften austauschen und vernetzen!\n Du hast ein technisches Problem? Lauf an unserem Helpdesk vorbei!\n Viel Spaß beim Vernetzen!",
+    [
+      {
+        label: "Schließen",
+        className: "secondary",
+        callback: () => closePopUp(),
+      }
+    ]
+  );
 });
 
 WA.room.onLeaveLayer("infoSaule_zone").subscribe(() => {
   closePopUp();
-  if (isCoWebSiteOpened) {
-    WA.nav.closeCoWebSite();
-    isCoWebSiteOpened = false;
-  }
 });
 
 WA.room.onEnterLayer("portal_program").subscribe(() => {
@@ -378,7 +371,7 @@ WA.onInit()
       });
     }
 
-      currentPopup = WA.ui.openPopup("popUpStart","Willkommen beim Tag der Vernetzung - nutze die Chance und lerne die anderen Teilnehmenden kennen!\n\nAgenda:\n\n9:30-10:00 Vernetzungsspiel im Saal\n10:00 Impulsvortrag KI auf der Hauptbühne\nAb 11:00 Besuche die Sitzecke für verschiedene Gesprächsangebote, schnapp dir ein Team und nehm an unserer Rally teil oder besuche die Führung des Co-Working Bereiches! \n Darüber hinaus kannst du dich natürlich die ganze Zeit mit anderen Nachwuchskräften austauschen und vernetzen!\nDu hast ein technisches Problem? Lauf an unserem Helpdesk vorbei!\n Viel Spaß beim Vernetzen!",[
+      currentPopup = WA.ui.openPopup("popUpStart","Willkommen beim Tag der Vernetzung - nutze die Chance und lerne die anderen Teilnehmenden kennen!\n\nAgenda:\n9:30-10:00 Vernetzungsspiel im Saal\n10:00 Impulsvortrag KI auf der Hauptbühne\nAb 11:00 Besuche die Sitzecke für verschiedene Gesprächsangebote, schnapp dir ein Team und nehm an unserer Rally teil oder besuche die Führung des Co-Working Bereiches! \n Darüber hinaus kannst du dich natürlich die ganze Zeit mit anderen Nachwuchskräften austauschen und vernetzen!\n\nDu hast ein technisches Problem? Lauf an unserem Helpdesk vorbei!\n Viel Spaß beim Vernetzen!",[
         {
             label: "Schließen",
             callback: (popup) => {
