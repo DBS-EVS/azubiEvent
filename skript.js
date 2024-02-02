@@ -222,7 +222,7 @@ WA.room.onLeaveLayer("feedbackZone").subscribe(() => {
 
 WA.room.onEnterLayer("infoSaule_zone").subscribe(() => {
   currentPopup = WA.ui.openPopup(
-    "infoPopUp2",
+    "infoPopUp",
     "Agenda:\n\n9:30-10:00 Vernetzungsspiel im Saal\n10:00 Impulsvortrag KI auf der Hauptbühne\nAb 11:00 Besuche die Sitzecke für verschiedene Gesprächsangebote, schnapp dir ein Team und nehm an unserer Rally teil oder besuche die Führung des Co-Working Bereiches! \n Darüber hinaus kannst du dich natürlich die ganze Zeit mit anderen Nachwuchskräften austauschen und vernetzen!\n Du hast ein technisches Problem? Lauf an unserem Helpdesk vorbei!\n Viel Spaß beim Vernetzen!",
     [
       {
