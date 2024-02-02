@@ -60,7 +60,7 @@ Ab 11:00 Besuche die Sitzecke f\xFCr verschiedene Gespr\xE4chsangebote, schnapp 
 Ab 11:00 Besuche die Sitzecke f\xFCr verschiedene Gespr\xE4chsangebote, schnapp dir ein Team und nehm an unserer Rally teil oder besuche die F\xFChrung des Co-Working Bereiches! 
  Dar\xFCber hinaus kannst du dich nat\xFCrlich die ganze Zeit mit anderen Nachwuchskr\xE4ften austauschen und vernetzen!
  Du hast ein technisches Problem? Lauf an unserem Helpdesk vorbei!
- Viel Spa\xDF beim Vernetzen!`,[{label:"Schlie\xDFen",className:"secondary",callback:()=>e()}])});WA.room.area.onLeave("agendaZone2").subscribe(()=>{e()});WA.room.onEnterLayer("feedbackZone").subscribe(()=>{n=WA.ui.openPopup("feedbackPopup","Was gibt's heute zu essen?",[{label:"Schlie\xDFen",className:"secondary",callback:()=>e()},{label:"Speiseplan",className:"primary",callback:a=>{WA.nav.openTab(s)}}])});WA.room.onLeaveLayer("feedbackZone").subscribe(()=>{e(),r&&(WA.nav.closeCoWebSite(),r=!1)});WA.room.onEnterLayer("infoSaule_zone").subscribe(()=>{n=WA.ui.openPopup("infoPopUp2",`Agenda:
+ Viel Spa\xDF beim Vernetzen!`,[{label:"Schlie\xDFen",className:"secondary",callback:()=>e()}])});WA.room.area.onLeave("agendaZone2").subscribe(()=>{e()});WA.room.onEnterLayer("feedbackZone").subscribe(()=>{n=WA.ui.openPopup("feedbackPopup","Was gibt's heute zu essen?",[{label:"Schlie\xDFen",className:"secondary",callback:()=>e()},{label:"Speiseplan",className:"primary",callback:a=>{WA.nav.openTab(s)}}])});WA.room.onLeaveLayer("feedbackZone").subscribe(()=>{e(),r&&(WA.nav.closeCoWebSite(),r=!1)});WA.room.onEnterLayer("infoSaule_zone").subscribe(()=>{n=WA.ui.openPopup("infoPopUp",`Agenda:
 
 9:30-10:00 Vernetzungsspiel im Saal
 10:00 Impulsvortrag KI auf der Hauptb\xFChne
