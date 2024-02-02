@@ -302,21 +302,17 @@ WA.room.onLeaveLayer("designer_zone").subscribe(() => {
 
 
 WA.room.onEnterLayer("info_zone").subscribe(() => {
-  currentPopup = WA.ui.openPopup("popUpInfo", WA.state.info_popupText, [
+  currentPopup = WA.ui.openPopup("popUpInfo", "Willkommen beim WorkAdventure Helpdesk!\nDu hast eine Frage oder suchst Unterstützung?\nSchau dir unser Tutorial zu den wichtigsten Einstellungen an :)", [
     {
-      label: WA.state.button_info,
-      callback: (popup) => {
-        if (WA.state.info_iframe) {
-          WA.nav.openCoWebSite(WA.state.program_info);
-        } else {
+      label: "Tutorial DB Planet",
+      callback: (popup) => {        
           WA.nav.openTab(WA.state.program_info);
         }
-      },
     },
     {
-      label: WA.state.button_info2,
+      label: "Supportchat",
       callback: (popup) => {
-          WA.nav.openTab(WA.state.teams_support_url);
+          WA.nav.openTab("https://teams.microsoft.com/l/chat/0/0?users=buenyamin.arslan@deutschebahn.com,nancy.meike@deutschebahn.com,kai.splitthof@deutschebahn.com&topicName=Hilfe%20Tag%20der%20Vernetzung&message=Hi%20könnt%20ihr%20mir%20bitte%20helfen");
       },
     },
     {
