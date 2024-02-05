@@ -306,7 +306,7 @@ WA.room.onEnterLayer("info_zone").subscribe(() => {
     {
       label: "Tutorial DB Planet",
       callback: (popup) => {        
-          WA.nav.openTab(WA.state.program_info);
+          WA.nav.openTab("https://db-planet.deutschebahn.com/pages/dbverse/apps/content/erste-schritte");
         }
     },
     {
