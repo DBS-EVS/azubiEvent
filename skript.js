@@ -302,7 +302,7 @@ WA.room.onLeaveLayer("designer_zone").subscribe(() => {
 
 
 WA.room.onEnterLayer("info_zone").subscribe(() => {
-  currentPopup = WA.ui.openPopup("popUpInfo", "Willkommen beim WorkAdventure Helpdesk!\nDu hast eine Frage oder suchst Unterstützung?\nSchau dir unser Tutorial zu den wichtigsten Einstellungen an :)", [
+  currentPopup = WA.ui.openPopup("popUpInfo", "Willkommen beim WorkAdventure Helpdesk!\nSchau unser Tutorial zu den wichtigsten Einstellungen an :)\nDu hast eine Frage oder suchst Unterstützung? In unserem Supportchat bekommst du Hilfe!", [
     {
       label: "Tutorial DB Planet",
       callback: (popup) => {        
